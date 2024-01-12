@@ -1,0 +1,91 @@
+{% extends "network/layout.html" %}
+{% load post_tags %}
+
+{% block body %}
+
+    <!-- Perfil de usuario -->
+    <div id="profile">
+        <h4>{{ user_profile.username }}</h4>
+        <h6>{{ user_profile.email }}</h6>
+        <div id="follow-cont">
+            <p id="followers"><span id="follower-counter">{{ user_profile.followers.all.count }}</span> Followers</p>
+            <p id="following"><span>{{ user_profile.following.all.count }}</span> Following</p>
+        </div>
+        
+        {% if user.is_authenticated and user_profile != user %}
+            {% if not following %}
+                <button class="btn btn-success" id="follow-unfollow" data-id="{{ user_profile.id }}" data-action="follow">Follow</button>
+            {% elif following %}
+                <button class="btn btn-danger" id="follow-unfollow" data-id="{{ user_profile.id }}" data-action="unfollow">Unfollow</button>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <!-- Lista de posts -->
+    <section id="main">
+        {% for post in page_obj %}
+            <div class="card">
+                <article class="card-body">
+                    <div class="post-header">
+                        <div>
+                            <h6><a href="{% url 'profile' post.posted_by.pk %}">{{ post.posted_by.username }}, {{ post.posted_by.email }}</a></h6>
+                        </div>
+                        {% if user == post.posted_by %}
+                            <button class="edit-post btn btn-outline-warning" class="edit-post" data-id="{{ post.pk }}">
+                                Edit
+                            </button>
+                        {% endif %}
+                    </div>
+                    
+                    <p class="content">{{ post.content|linebreaksbr }}</p>
+
+                    <div class="post-date-time">{{ post.posted_on }}</div>
+
+                    <!-- Likes -->
+                    <div class="likes-count">
+                        {% if user.is_authenticated %}
+                            {% is_liked_by post user as is_liked %}
+                            <a href="#" class="like-btn" data-id="{{ post.pk }}" data-action="{{ is_liked }}">
+                                <!-- Si te gusta el post -->
+                                {% if is_liked %}
+                                    <i class="fa-solid fa-heart"></i>
+                                {% else %}
+                                    <i class="fa-regular fa-heart"></i>
+                                {% endif%}
+                            </a>
+                        {% endif %}
+                        <span>
+                            {{ post.likes.count }}
+                        </span>
+                        Likes
+                    </div>
+                </article>
+            </div>
+            <br>
+        {% empty %}
+            <p>There are no posts yet.</p>
+        {% endfor %}
+    </section>
+
+    <!-- Paginacion -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+            {% endif %}
+
+            <li class="page-item">
+                <a class="page-link">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </a>
+            </li>
+
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+{% endblock %}
