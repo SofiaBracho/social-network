@@ -45,3 +45,15 @@ a.like-btn i.fa-regular {
 #follow-cont p:first-child {
     margin-right: 1rem;
 }
+.navbar-brand {
+    color: white!important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+nav.bg-light {
+    background-color: #62b0ff !important;
+}
+div.body, body {
+    background: #e2f7fd!important;
+}
