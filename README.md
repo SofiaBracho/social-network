@@ -139,7 +139,7 @@ If you'd like to contribute, fork the repository and make changes as you'd like.
 ### 👥 Author
 
 <a href="https://github.com/SofiaBracho">
-  <img src="https://github.com/SofiaBracho/social-network/blob/master/network/static/img/author.PNG" width="50px" alt="Author"/>
+  <img src="https://github.com/SofiaBracho/social-network/blob/master/network/static/img/author.png" width="50px" alt="Author"/>
 </a>
 
 **Sofia Bracho**
