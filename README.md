@@ -42,7 +42,7 @@ The social network has the following features:
 
 ## 🖥️ Demo
 
-![Flashcards Demo GIF](https://github.com/SofiaBracho/flashcards/blob/master/network/static/demo.gif)
+![Flashcards Demo GIF](https://github.com/SofiaBracho/social-network/blob/master/network/static/demo.gif)
 
 
 ## 🛠️ Getting Started
@@ -111,23 +111,23 @@ The `views.py` file defines the views for the social network. The following view
 
 - **Index**: displays the home page of the social network with all the recent posts.
 
-![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/home.png)
+![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/home.PNG)
 
 - **Following**: displays the posts from the users that the current user is following.
 
-![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/following.png)
+![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/following.PNG)
 
 - **Profile**: displays the posts by a specific user.
 
-![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/profile.png)
+![Profile view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/profile.PNG)
 
 - **Login**: displays a login form to athenticate the user.
 
-![Login view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/login.png)
+![Login view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/login.PNG)
 
 - **Register**: displays a registration form to create a new user.
 
-![Login view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/register.png)
+![Login view](https://github.com/SofiaBracho/social-network/blob/master/network/static/img/register.PNG)
 
 
 ## 🔀 Contributing
@@ -139,7 +139,7 @@ If you'd like to contribute, fork the repository and make changes as you'd like.
 ### 👥 Author
 
 <a href="https://github.com/SofiaBracho">
-  <img src="https://github.com/SofiaBracho/social-network/blob/master/network/static/img/author.png" width="50px" alt="Author"/>
+  <img src="https://github.com/SofiaBracho/social-network/blob/master/network/static/img/author.PNG" width="50px" alt="Author"/>
 </a>
 
 **Sofia Bracho**
