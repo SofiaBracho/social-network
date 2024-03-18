@@ -1,0 +1,59 @@
+.body {
+    padding: 1rem;
+}
+form input.btn-primary {
+    margin-top: .5rem;
+    padding: .3rem 2rem;
+}
+
+article div.post-header {
+    display: flex;
+    justify-content: space-between;
+}
+button.edit-post {
+    padding: .3rem 1.5rem;
+}
+.post-date-time {
+    font-size: smaller;
+    color: #808080;
+}
+a.like-btn {
+    text-decoration: none;
+    font-size: larger;
+    transition: all .3s ease;
+}
+a.like-btn i:hover {
+    transform: scale(1.05);
+} 
+a.like-btn i.fa-solid {
+    color: red;
+}
+a.like-btn i.fa-regular {
+    color: #808080;
+}
+
+#follow-unfollow {
+    margin-bottom: 1rem;
+}
+#follow-cont {
+    display: flex;
+}
+
+#follow-cont p span {
+    font-weight: bold;
+}
+#follow-cont p:first-child {
+    margin-right: 1rem;
+}
+.navbar-brand {
+    color: white!important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+nav.bg-light {
+    background-color: #62b0ff !important;
+}
+div.body, body {
+    background: #e2f7fd!important;
+}
