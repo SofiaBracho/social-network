@@ -29,9 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-8a70.up.railway.app', 
-    'https://web-production-8a70.up.railway.app/login',
-    'https://web-production-8a70.up.railway.app/register'
+    'https://social-network-production-4b10.up.railway.app', 
+    'https://social-network-production-4b10.up.railway.app/login',
+    'https://social-network-production-4b10.up.railway.app/register'
 ]
 
 
