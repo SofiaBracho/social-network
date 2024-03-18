@@ -25,7 +25,13 @@ SECRET_KEY = '13kl@xtukpwe&xj2xoysxe9_6=tf@f8ewxer5n&ifnd46+6$%8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-8a70.up.railway.app', 
+    'https://web-production-8a70.up.railway.app/login',
+    'https://web-production-8a70.up.railway.app/register'
+]
 
 
 # Application definition
