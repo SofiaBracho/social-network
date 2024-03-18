@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 post_id: postId
             }
             
-            var url = `http://127.0.0.1:8000/like/`
+            // var url = `http://127.0.0.1:8000/like/`
+            var url = window.location.origin + "/like/"
             fetch(url, {
                 method:'POST',
                 headers:{
@@ -116,7 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 user_id: userId
             }
             
-            var url = `http://127.0.0.1:8000/follow/`
+            // var url = `http://127.0.0.1:8000/follow/`
+            var url = window.location.origin + "/follow/"
             fetch(url, {
                 method:'POST',
                 headers:{
@@ -222,7 +224,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     content: contentTextArea.value
                 }
                 
-                var url = `http://127.0.0.1:8000/post_edit/`
+                // var url = `http://127.0.0.1:8000/post_edit/`
+                var url = window.location.origin + "/post_edit/"
                 fetch(url, {
                     method:'POST',
                     headers:{
