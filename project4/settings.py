@@ -33,9 +33,9 @@ DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://social-network-production.up.railway.app', 
-    'https://social-network-production.up.railway.app/login',
-    'https://social-network-production.up.railway.app/register'
+    'https://social-network-production-4b10.up.railway.app', 
+    'https://social-network-production-4b10.up.railway.app/login',
+    'https://social-network-production-4b10.up.railway.app/register'
 ]
 
 
